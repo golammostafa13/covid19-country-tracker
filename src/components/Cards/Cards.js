@@ -3,13 +3,12 @@ import CountUp from 'react-countup';
 import cx from 'classnames';
 import {Grid, Card, CardContent, Typography} from '@material-ui/core';
 import styles from './Cards.module.css';
-import loading from '../../Images/loading.gif';
 
 const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}, country="bangladesh"}) => {
-    if(!confirmed || !recovered || !deaths)return <img src={loading} alt="loading" />;
+    if(!confirmed || !recovered || !deaths) return null;
     return (
         <div className={styles.container}>
-            <Typography style={{marginBottom: '2rem !important', color: '#333', fontSize:'1.5rem'}} color="textPrimary" gutterBottom><strong>{country}</strong> Current State</Typography>
+            <Typography style={{marginBottom: '2.5rem', color: '#333', fontSize:'1.5rem'}} color="textPrimary" gutterBottom><strong>{country}</strong> Current State</Typography>
             <Grid container spacing={3} justify="center">
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                     <CardContent>
