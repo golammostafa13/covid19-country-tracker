@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  background: #056b8a;
+  text-align: center;
+  height: 5%;
+  color: white;
+}
+.link {
+  color: white;
+}
+.link:hover {
+  text-decoration: none;
+}

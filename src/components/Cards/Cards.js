@@ -9,7 +9,7 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}, country="bangla
     if(!confirmed || !recovered || !deaths)return <img src={loading} alt="loading" />;
     return (
         <div className={styles.container}>
-            <h1>Details for: {country ? country : 'Global'}</h1>
+            <Typography style={{marginBottom: '2rem !important', color: '#333', fontSize:'1.5rem'}} color="textPrimary" gutterBottom><strong>{country}</strong> Current State</Typography>
             <Grid container spacing={3} justify="center">
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                     <CardContent>

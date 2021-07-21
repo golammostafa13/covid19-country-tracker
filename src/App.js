@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Cards, Chart, CountryPicker} from './components';
+import {Cards, Chart, CountryPicker, Header, Footer} from './components';
 import {fetch} from './api/fetchData';
 import styles from './App.module.css';
 const App = () => {
@@ -21,9 +21,11 @@ const App = () => {
     }
     return (
         <div className={styles.container}>
+            <Header />
             <Cards data={data} country={country}/>
             <CountryPicker handleCountryChange={handleCountryChange}/>
             <Chart data={data} country={country}/>
+            <Footer />
         </div>
     );
 };
